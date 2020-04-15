@@ -1,0 +1,50 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##samtoolsVersion=1.7+htslib-1.7-2
+##samtoolsCommand=samtools mpileup -uf NC_007898.fasta BC_28.trim.bam
+##reference=file://NC_007898.fasta
+##contig=<ID=NC_007898.3,length=155461>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPB,Number=1,Type=Float,Description="Mann-Whitney U test of Read Position Bias (bigger is better)">
+##INFO=<ID=MQB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality Bias (bigger is better)">
+##INFO=<ID=BQB,Number=1,Type=Float,Description="Mann-Whitney U test of Base Quality Bias (bigger is better)">
+##INFO=<ID=MQSB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality vs Strand Bias (bigger is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AF2,Number=1,Type=Float,Description="Max-likelihood estimate of the first and second group ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##bcftools_callVersion=1.7+htslib-1.7-2
+##bcftools_callCommand=call -c -v --ploidy 1; Date=Tue Apr 14 17:49:38 2020
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	BC_28.trim.bam
+NC_007898.3	8092	.	CTTTTTTTTTTT	CTTTTTTTTT,CTTTTTTTTTT	16.5631	.	INDEL;IDV=6;IMF=0.461538;DP=13;VDB=0.237542;SGB=-0.651104;MQSB=0.115573;MQ0F=0;AF1=1;AC1=1;DP4=1,0,5,3;MQ=38;FQ=-999;PV4=1,1,0.288753,0.266175	GT:PL	1:56,10,2,54,0,50
+NC_007898.3	16571	.	CAAAAAAAAAAA	CAAAAAAAAA,CAAAAAAAAAA	10.8397	.	INDEL;IDV=5;IMF=0.5;DP=8;VDB=0.588406;SGB=-0.590765;MQSB=1;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,4;MQ=35;FQ=-999	GT:PL	1:48,12,0,48,5,45
+NC_007898.3	23202	.	CTTTTTTT	CTTTTTT	3.80489	.	INDEL;IDV=11;IMF=0.578947;DP=19;VDB=0.538108;SGB=-0.651104;MQSB=0.864013;MQ0F=0;AF1=0.506359;AC1=1;DP4=3,1,3,5;MQ=42;FQ=-999;PV4=0.545455,0.00449818,0.252926,0.302696	GT:PL	1:55,0,16
+NC_007898.3	33654	.	A	G	11.3361	.	DP=4;VDB=0.0349627;SGB=-0.511536;RPB=1;MQB=1;MQSB=1;BQB=1;MQ0F=0;AF1=0.508032;AC1=1;DP4=0,1,3,0;MQ=42;FQ=-999;PV4=0.25,0.4694,1,0	GT:PL	1:56,15
+NC_007898.3	34059	.	A	G	4.7673	.	DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,0,1;MQ=42;FQ=-999	GT:PL	1:33,0
+NC_007898.3	40440	.	G	GA	4.41606	.	INDEL;IDV=1;IMF=1;DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,0;MQ=40;FQ=-999	GT:PL	1:40,3,0
+NC_007898.3	41399	.	GT	GTT	4.41606	.	INDEL;IDV=1;IMF=1;DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,0;MQ=42;FQ=-999	GT:PL	1:40,3,0
+NC_007898.3	53242	.	G	GT	3.80489	.	INDEL;IDV=1;IMF=1;DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,0;MQ=42;FQ=-999	GT:PL	1:39,3,0
+NC_007898.3	53342	.	C	T	3.54149	.	DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,0,1;MQ=42;FQ=-999	GT:PL	1:31,0
+NC_007898.3	66481	.	CAAAA	CAAA	5.0803	.	INDEL;IDV=3;IMF=0.75;DP=4;VDB=0.725151;SGB=-0.511536;MQSB=1;MQ0F=0;AF1=0.512851;AC1=1;DP4=1,0,2,1;MQ=42;FQ=-999;PV4=1,0.168867,0.333333,0.219542	GT:PL	1:54,0,13
+NC_007898.3	70980	.	ATTTTTTTTT	ATTTTTTT	4.41606	.	INDEL;IDV=2;IMF=1;DP=2;VDB=0.5;SGB=-0.453602;MQ0F=0;AF1=1;AC1=1;DP4=0,0,0,2;MQ=34;FQ=-999	GT:PL	1:40,6,0
+NC_007898.3	71369	.	AT	ATT	3.80489	.	INDEL;IDV=1;IMF=0.333333;DP=3;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,0;MQ=42;FQ=-999	GT:PL	1:39,3,0
+NC_007898.3	72196	.	TA	TAA	3.24957	.	INDEL;IDV=1;IMF=1;DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,0;MQ=42;FQ=-999	GT:PL	1:38,3,0
+NC_007898.3	73251	.	A	G	4.7673	.	DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,0,1;MQ=40;FQ=-999	GT:PL	1:33,0
+NC_007898.3	77760	.	T	C	5.45858	.	DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,0,1;MQ=40;FQ=-999	GT:PL	1:34,0
+NC_007898.3	79513	.	GAA	GAAA	3.24957	.	INDEL;IDV=1;IMF=1;DP=1;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,0,1;MQ=42;FQ=-999	GT:PL	1:38,3,0
+NC_007898.3	84344	.	C	T	4.7673	.	DP=2;SGB=-0.379885;MQ0F=0;AF1=1;AC1=1;DP4=0,0,1,0;MQ=42;FQ=-999	GT:PL	1:33,0
+NC_007898.3	125412	.	CAAAAAAA	CAAAAAA	4.41606	.	INDEL;IDV=6;IMF=0.666667;DP=9;VDB=0.702808;SGB=-0.616816;MQSB=1;MQ0F=0;AF1=1;AC1=1;DP4=0,1,1,5;MQ=42;FQ=-999;PV4=1,0.466543,0.360486,1	GT:PL	1:40,0
