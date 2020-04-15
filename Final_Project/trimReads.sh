@@ -3,6 +3,11 @@
 # 1 - file path to directory
 # 2 - path to adapter sequence filter
 
+count=`ls -1 $1/*.trim.fastq 2>/dev/null | wc -l`
+
+if [ $count == 0 ]
+then
+echo "Processing fastq files within directory $1."
 cd $1
 
 for f in *.fastq; do
@@ -13,3 +18,9 @@ for f in *.fastq; do
     rm $b.fastq
     
 done
+
+
+
+else
+echo "Unable to process fastq files within direct $1, because they have already been processed."
+fi 

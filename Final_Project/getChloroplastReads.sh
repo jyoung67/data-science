@@ -3,6 +3,11 @@
 
 # 1 - directory to download SRA files to
 
+if [ ! -d $1 ]
+then
+
+echo "Creating new directory at ${1} for sequence reads."
+
 mkdir -p $1
 
 fastq-dump SRR1763770 --outdir $1
@@ -32,6 +37,10 @@ mv SRR1763778.fastq BC_22.fastq
 mv SRR1763779.fastq BC_19.fastq
 mv SRR1763780.fastq BC_30.fastq
 mv SRR1763781.fastq BC_26.fastq
+
+else
+  echo "Unable to download sequence reads, because directory ${1} already exists."
+fi
 
 
 
